@@ -14,8 +14,6 @@ public class HttpUtil {
     public static void main(String[] args) {
     }
 
-    MyCode
-
 
     public static String openUrlTWR(String strUrl,String postParams){
         String message = "";
