@@ -3,7 +3,7 @@ package com.mousycoder.mycode.jvm;
 /**
  * 测试栈的深度
  *
- * @version 1.0
+ * @version 2.0
  * @author: mousycoder
  * @date: 2019-02-12 15:43
  */
