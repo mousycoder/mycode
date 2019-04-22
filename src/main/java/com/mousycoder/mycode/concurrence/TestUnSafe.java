@@ -9,11 +9,25 @@ import sun.misc.Unsafe;
  */
 public class TestUnSafe {
 
-     static final Unsafe unsafe = Unsafe.getUnsafe();
+    static final Unsafe unsafe = Unsafe.getUnsafe();
 
-     static final long stateOffSet = 0 ;
+    static final long stateOffSet ;
 
-     private volatile static long state;
+    private volatile long state = 0;
 
+    static {
+        try {
+            stateOffSet = unsafe.objectFieldOffset(TestUnSafe.class.getDeclaredField("state"));
+        } catch (NoSuchFieldException e) {
+            System.out.println(e.getLocalizedMessage());
+            throw new Error(e);
+        }
+    }
+
+    public static void main(String[] args) {
+        TestUnSafe test = new TestUnSafe();
+        Boolean sucess = unsafe.compareAndSwapInt(test, stateOffSet, 0, 1);
+        System.out.println(sucess);
+    }
 
 }
