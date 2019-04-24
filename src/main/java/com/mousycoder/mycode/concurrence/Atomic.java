@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * @author: mousycoder
  * @date: 2019-04-22 18:04
  */
+
 public class Atomic {
 
     private static AtomicLong atomicLong = new AtomicLong();
