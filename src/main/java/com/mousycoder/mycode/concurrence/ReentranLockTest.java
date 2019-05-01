@@ -14,7 +14,6 @@ public class ReentranLockTest {
         ReentrantLock lock = new ReentrantLock();
         Condition condition = lock.newCondition();
 
-
         lock.lock();
 
         try {
