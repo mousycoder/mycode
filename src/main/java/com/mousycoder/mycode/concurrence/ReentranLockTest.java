@@ -15,7 +15,6 @@ public class ReentranLockTest {
         Condition condition = lock.newCondition();
 
         lock.lock();
-
         try {
             System.out.println("begin wait");
             condition.await();
