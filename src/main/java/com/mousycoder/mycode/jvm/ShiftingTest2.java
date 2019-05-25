@@ -1,13 +1,11 @@
 package com.mousycoder.mycode.jvm;
 
-import java.awt.font.NumericShaper;
-
 /**
  * @version 1.0
  * @author: mousycoder
  * @date: 2019-05-10 16:38
  */
-public class ShiftingTest {
+public class ShiftingTest2 {
     public static void main(String[] args) {
 //       int i ;
 //       int num = 0xFFFFFFE;
@@ -33,20 +31,12 @@ public class ShiftingTest {
 //
 //        System.out.println(num1 & num2);
 
-        int i = Integer.MAX_VALUE;
-        System.out.println(i);
+        int i = 1;
         System.out.println(Integer.toBinaryString(i));
-        i = i << 1;
-        System.out.println(i);
-        System.out.println(Integer.toBinaryString(i));
-
-
         int j = -1;
-        System.out.println(j);
         System.out.println(Integer.toBinaryString(j));
-        j = j << 1;
-        System.out.println(j);
-        System.out.println(Integer.toBinaryString(j));
+        int k = i + j;
+        System.out.println(Integer.toBinaryString(k));
 
 
 
